@@ -1,0 +1,133 @@
+
+/* @theme milky */
+
+@font-face {
+    font-family: 'hei'; /* 自定义字体名称 */
+    src: url('themes/fonts/hei.ttf') format('truetype'); /* 字体文件路径 */
+    font-weight: 100; /* 字体粗细 */
+    font-style: 100;  /* 字体样式 */
+}
+
+@font-face {
+    font-family: 'times'; /* 自定义字体名称 */
+    src: url('themes/fonts/times.ttf') format('truetype'); /* 字体文件路径 */
+    font-weight: 100; /* 字体粗细 */
+    font-style: 100;  /* 字体样式 */
+}
+
+:root {
+    --main: rgb(44, 103, 213);
+    --secondary: black;
+  }
+
+
+section {
+    font-size: 28px;
+    text-align: left;
+    color: black;
+    background-image: url('images/background.jpg');
+    background-size: contain;
+    padding: 2em;
+    font-weight: bold;
+}
+
+h1 {
+    /* margin-left: 2em; */
+    margin-top: -0.5em;
+    text-align:left;
+    color: rgb(44, 103, 213);
+    margin-bottom: 48px;
+    font-size:44px;
+}
+
+h2 {
+    text-align:center;
+    color: black;
+    margin-top: 390px;
+    margin-bottom: 0px;
+    font-size:36px;
+}
+
+h5 {
+    text-align:center;
+    color: black;
+    margin-bottom: 0px;
+    font-size:36px;
+    font-family: 'times', 'hei', sans-serif;
+}
+
+p {
+    font-size: 30px;
+}
+
+header {
+    font-size: 0.6em;
+    text-align: right;
+    position: absolute;
+    top: 96.2%;
+    width: 100%;
+    right: 0;
+    left: -51%;
+    color: white;
+}
+
+footer {
+    font-size: 0.6em;
+    position: absolute;
+    /* this text-align is important */
+    text-align: left;
+    top: 95%;
+    width: 100%;
+    right: 0;
+    left: 2%;
+    color: var(--main);
+    font-family: "hei";
+    font-size: 25px;
+}
+
+section.title>h1 {
+    color: var(--main);
+    background-color: white;
+    margin-top: 0px;
+    border-radius: none;
+    text-align: center;
+    top: 25%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    padding-bottom: 0.2em;
+    height: auto;
+}
+
+section.title>h5 {
+    color: black;
+    /* background-color: var(--main); */
+    /* border-radius: 25px; */
+    margin-top: 340px;
+    text-align: center;
+    top: 25%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin-bottom: 16px;
+    height: auto;
+}
+
+section.title>p {
+    /* position: relative; */
+    text-align: center;
+    top: 35px;
+    font-weight: bold;
+    font-family: 'times';
+}
+
+section::after {
+    content: attr(data-marpit-pagination) ' / ' attr(data-marpit-pagination-total);
+    font-family: "times";
+    position: absolute;
+    text-align: right;
+    top: 87.5%;
+    color: var(--main)
+}
